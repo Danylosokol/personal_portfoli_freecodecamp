@@ -56,12 +56,14 @@ li a{
   width: 100vw;
   height: calc(100vh - 7rem);
   background-image: linear-gradient(45deg, #383C3E, #18181A);
-  /*display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;*/
+  align-items: center;
+}
+
+#welcome div{
   text-align: center;
-  padding-top: 20rem;
 }
 
 #welcome h1{
@@ -79,4 +81,81 @@ li a{
   font-size: 3rem;
   font-weight: 200;
   font-style: italic;
+}
+
+#projects{
+  box-sizing: border-box;
+  background-color: #44557D;
+  width: 100vw;
+  padding: 10rem 2rem 2rem 2rem;
+}
+
+#projects h2{
+  text-align: center;
+  font-family: 'Raleway', 'Arial', 'Helvetica', sans-serif;
+  font-size: 4.25rem;
+  color: #F0F0F0;
+  font-weight: 600;
+}
+
+#projects hr{
+  width: 65rem;
+  height: .25rem;
+  background-color: #F0F0F0;
+  border: 0;
+  margin: .75rem auto 10rem auto;
+}
+
+#project-cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.project-title{
+  width: 28%;
+  margin: 0 0 4rem 0; 
+  text-align: center;
+  background-color: #303841;
+  box-shadow: .05rem .05rem .5rem .025rem #000;
+  transition: box-shadow .5s ease-out;
+}
+
+.project-title:hover{
+  box-shadow: .25rem .25rem .5rem .05rem #000;
+}
+
+.project-title img{
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+}
+
+.project-title figcaption{
+  font-size: 2rem;
+  padding: 2rem 0;
+}
+
+.project-title figcaption span{
+  color: #303841;
+  transition: color .5s ease-out;
+}
+
+.project-title:hover span{
+    color: #ff7f50;
+}
+
+#projects button{
+  display: block;
+  margin: 0 auto 8rem auto;
+  padding: 1rem;
+  border: none;
+  background-color: #303841;
+  color: #F0F0F0;
+  font-size: 2rem;
+  transition: background-color .5s ease-out;
+}
+
+#projects button:hover{
+  background-color: #BE3143;
 }
