@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Poppins',  'Arial', 'Helvetica', sans-serif;
+  scroll-padding-top: 7rem;
 }
 
 html,
@@ -14,7 +15,7 @@ a{
   color: #F0F0F0;
 }
 
-navbar{
+#navbar{
   position: fixed;
   top: 0;
   left: 0;
@@ -27,6 +28,7 @@ navbar{
   justify-content: flex-end;
   padding: 0 2rem;
   box-shadow: 0px .2rem 1rem .01rem #000;
+  z-index: 1;
 }
 
 ul{
@@ -50,11 +52,10 @@ li a{
   width: 100%;
 }
 
-#welcome{
+#welcome-section{
   box-sizing: border-box;
-  margin-top: 7rem;
   width: 100vw;
-  height: calc(100vh - 7rem);
+  height: 100vh;
   background-image: linear-gradient(45deg, #383C3E, #18181A);
   display: flex;
   flex-direction: column;
@@ -62,11 +63,11 @@ li a{
   align-items: center;
 }
 
-#welcome div{
+#welcome-section div{
   text-align: center;
 }
 
-#welcome h1{
+#welcome-section h1{
   font-size: 6rem;
   color: #F0F0F0;
   font-family: 'Raleway', 'Arial', 'Helvetica', sans-serif;
@@ -75,7 +76,7 @@ li a{
   display: block;
 }
 
-#welcome p{
+#welcome-section p{
   display: block;
   color: #BE3143;
   font-size: 3rem;
@@ -87,7 +88,7 @@ li a{
   box-sizing: border-box;
   background-color: #44557D;
   width: 100vw;
-  padding: 10rem 6rem 2rem 6rem;
+  padding: 12rem 6rem 2rem 6rem;
 }
 
 #projects h2{
@@ -103,7 +104,7 @@ li a{
   height: .25rem;
   background-color: #F0F0F0;
   border: 0;
-  margin: .75rem auto 10rem auto;
+  margin: .75rem auto 6rem auto;
 }
 
 #project-cards{
@@ -113,7 +114,8 @@ li a{
 }
 
 .project-tile{
-  width: 30%;
+  flex-shrink: 0;
+  width: 40rem;
   margin: 0 0 4rem 0; 
   text-align: center;
   background-color: #303841;
@@ -176,4 +178,93 @@ li a{
 
 #projects button:hover .fa-angle-right{
   left: .5rem;
+}
+
+#contacts{
+  height: calc(100vh - 17rem);
+  width: 100vw;
+  background-color: #303841;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#content{
+  text-align: center;
+  color: #F0F0F0;
+  width: 100vw;
+}
+
+#content h2{
+  font-size: 6rem;
+  font-family: 'Raleway', 'Arial', 'Helvetica', sans-serif;
+  color: #F0F0F0;
+}
+
+#content p{
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 200;
+  margin:1rem 0 3.5rem 0;
+}
+
+#contact-buttons{
+  display: flex;
+  font-size: 2.5rem;
+  justify-content: center;
+}
+
+#contact-buttons div{
+  padding: 2rem;
+  text-shadow: .15rem .15rem .25rem #000;
+  position: relative;
+  transition: top .2s ease-out;
+  top: 0rem;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#contact-buttons div:hover{
+  top: .5rem;
+}
+
+#contact-buttons div .fa{
+  padding-right: 1rem;
+  font-weight: 600;
+  font-size: 2.75rem;
+}
+
+footer{
+  width: 100vw;
+  height: 10rem;
+  border-top: .4rem solid #BE3143;
+  background-color: #303841; 
+  font-size: 1.5rem;
+  color: #F0F0F0;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 3.5rem 0;
+}
+
+@media screen and (max-width: 910px){
+  #project h2{
+    font-size: 4rem;
+  }
+
+  #projects hr{
+    width: 62.5rem;
+  }
+
+  #navbar{
+    font-size: 2rem;
+  }
+  #contact-buttons{
+    font-size: 2rem; 
+  }
+  #contact-buttons div .fa{
+    font-size: 2.25rem;
+  }
 }
