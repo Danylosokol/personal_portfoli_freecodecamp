@@ -1,315 +1,316 @@
-*{
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", "Arial", "Helvetica", sans-serif;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins',  'Arial', 'Helvetica', sans-serif;
   scroll-padding-top: 7rem;
-  box-sizing: border-box;
 }
 
 html,
-body{
+body {
   font-size: 62.5%;
-  max-width: 100vw;
   height: 100%;
+  max-width: 100vw;
+  scroll-behavior: smooth;
 }
 
-a{
+a {
+  color: #f0f0f0;
   text-decoration: none;
-  color: #F0F0F0;
 }
 
-#navbar{
+#navbar {
+  background-color: #be3143;
+  box-shadow: 0px 0.2rem 1rem 0.01rem #000;
+  display: flex;
+  font-size: 2.25rem;
+  height: 7rem;
+  justify-content: flex-end;
+  left: 0;
+  padding: 0 2rem;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100vw;
-  font-size: 2.25rem;
-  display: flex;
-  height: 7rem;
-  background-color: #BE3143;
-  justify-content: flex-end;
-  padding: 0 2rem;
-  box-shadow: 0px .2rem 1rem .01rem #000;
   z-index: 1;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
-li{
+li {
   display: inline-block;
-  padding: 0 2rem;
   height: 100%;
 }
 
-li:hover{
-  background-color: #44557D;
+li:hover {
+  background-color: #44557d;
 }
 
-li a{
-  display: flex;
+li a {
   align-items: center;
+  display: flex;
   height: 100%;
+  padding: 0 2rem;
   width: 100%;
 }
 
-#welcome-section{
-  width: 100vw;
-  height: 100vh;
-  background-image: linear-gradient(45deg, #383C3E, #18181A);
+#welcome-section {
+  align-items: center;
+  background-image: linear-gradient(45deg, #383c3e, #18181a);
   display: flex;
   flex-direction: column;
+  height: 100vh;
   justify-content: center;
-  align-items: center;
+  width: 100vw;
 }
 
-#welcome-section div{
+#welcome-section div {
   text-align: center;
 }
 
-#welcome-section h1{
+#welcome-section h1 {
+  color: #f0f0f0;
+  display: block;
+  font-family: "Raleway", "Arial", "Helvetica", sans-serif;
   font-size: 6rem;
-  color: #F0F0F0;
-  font-family: 'Raleway', 'Arial', 'Helvetica', sans-serif;
   font-weight: 700;
   padding-bottom: 1rem;
-  display: block;
 }
 
-#welcome-section p{
+#welcome-section p {
+  color: #be3143;
   display: block;
-  color: #BE3143;
   font-size: 3rem;
-  font-weight: 200;
   font-style: italic;
+  font-weight: 200;
 }
 
-#projects{
-  background-color: #44557D;
-  width: 100vw;
+#projects {
+  background-color: #44557d;
   padding: 12rem 2rem 2rem 2rem;
+  width: 100vw;
 }
 
-#projects h2{
-  text-align: center;
-  font-family: 'Raleway', 'Arial', 'Helvetica', sans-serif;
+#projects h2 {
+  color: #f0f0f0;
+  font-family: "Raleway", "Arial", "Helvetica", sans-serif;
   font-size: 4.25rem;
-  color: #F0F0F0;
   font-weight: 600;
+  text-align: center;
 }
 
-#projects hr{
-  width: 65rem;
-  height: .25rem;
-  background-color: #F0F0F0;
+#projects hr {
+  background-color: #f0f0f0;
   border: 0;
-  margin: .75rem auto 6rem auto;
+  height: 0.25rem;
+  margin: 0.75rem auto 6rem auto;
+  width: 65rem;
 }
 
-#project-cards{
+#project-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.project-tile{
-  flex-shrink: 0;
-  width: 40rem;
-  margin: 0 2rem 4rem 2rem; 
-  text-align: center;
+.project-tile {
   background-color: #303841;
-  box-shadow: .05rem .05rem .5rem .025rem #000;
-  transition: box-shadow .5s ease-out;
+  box-shadow: 0.05rem 0.05rem 0.5rem 0.025rem #000;
+  flex-shrink: 0;
+  margin: 0 2rem 4rem 2rem;
+  text-align: center;
+  transition: box-shadow 0.5s ease-out;
+  width: 40rem;
 }
 
-.project-tile:hover{
-  box-shadow: .25rem .25rem .5rem .05rem #000;
+.project-tile:hover {
+  box-shadow: 0.25rem 0.25rem 0.5rem 0.05rem #000;
 }
 
-.project-tile img{
-  width: 100%;
+.project-tile img {
   height: 40rem;
   object-fit: cover;
+  width: 100%;
 }
 
-.project-tile figcaption:not(span){
-  padding: 2rem 1rem;
+.project-tile figcaption:not(span) {
   font-size: 2rem;
+  padding: 2rem 1rem;
 }
 
-.project-tile figcaption span{
+.project-tile figcaption span {
   color: #303841;
-  transition: color .5s ease-out;
   font-size: 2.25rem;
+  transition: color 0.5s ease-out;
   vertical-align: middle;
 }
 
-.project-tile:hover span{
-    color: #ff7f50;
+.project-tile:hover span {
+  color: #ff7f50;
 }
 
-#projects button{
-  display: block;
-  margin: 0 auto 8rem auto;
-  width: 15rem;
-  height: 5rem;
-  border: none;
+#projects button {
   background-color: #303841;
-  color: #F0F0F0;
+  border: none;
+  color: #f0f0f0;
+  display: block;
   font-size: 2rem;
-  transition: background-color .5s ease-out;
+  height: 5rem;
+  margin: 0 auto 8rem auto;
+  transition: background-color 0.5s ease-out;
+  width: 15rem;
 }
 
-#projects button .fa{
+#projects button .fa {
   font-size: 3rem;
-  vertical-align: text-bottom;
-  margin-left: .5rem;
-  left: 0;  
-  position: relative;
   font-weight: bolder;
-  transition: left .5s ease-out;
+  left: 0;
+  margin-left: 0.5rem;
+  position: relative;
+  transition: left 0.5s ease-out;
+  vertical-align: text-bottom;
 }
 
-#projects button:hover{
-  background-color: #BE3143;
+#projects button:hover {
+  background-color: #be3143;
 }
 
-#projects button:hover .fa-angle-right{
-  left: .5rem;
+#projects button:hover .fa-angle-right {
+  left: 0.5rem;
 }
 
-#contacts{
-  height: calc(100vh - 17rem);
-  width: 100vw;
+#contacts {
+  align-items: center;
   background-color: #303841;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   flex-flow: column;
-  align-items: center;
-}
-
-#content{
-  text-align: center;
-  color: #F0F0F0;
+  flex-wrap: wrap;
+  height: calc(100vh - 17rem);
+  justify-content: center;
   width: 100vw;
 }
 
-#content h2{
-  font-size: 6rem;
-  font-family: 'Raleway', 'Arial', 'Helvetica', sans-serif;
-  color: #F0F0F0;
+#content {
+  color: #f0f0f0;
+  text-align: center;
+  width: 100vw;
 }
 
-#content p{
+#content h2 {
+  color: #f0f0f0;
+  font-family: "Raleway", "Arial", "Helvetica", sans-serif;
+  font-size: 6rem;
+}
+
+#content p {
   font-size: 1.8rem;
   font-style: italic;
   font-weight: 200;
-  margin:1rem 0 4.5rem 0;
+  margin: 1rem 0 4.5rem 0;
 }
 
-#contact-buttons{
+#contact-buttons {
   display: flex;
+  flex-wrap: wrap;
   font-size: 2.5rem;
   justify-content: center;
-  flex-wrap: wrap;
   width: 100vw;
 }
 
-#contact-buttons div{
-  padding: 1rem 2rem 0 2rem;
-  text-shadow: .15rem .15rem .25rem #000;
-  position: relative;
-  transition: top .2s ease-out;
-  top: 0rem;
+#contact-buttons div {
   flex-shrink: 0;
+  padding: 1rem 2rem 0 2rem;
+  position: relative;
+  text-shadow: 0.15rem 0.15rem 0.25rem #000;
+  top: 0rem;
+  transition: top 0.2s ease-out;
 }
 
-#contact-buttons div:hover{
-  top: .5rem;
+#contact-buttons div:hover {
+  top: 0.5rem;
 }
 
-#contact-buttons div .fa{
-  padding-right: 1rem;
-  font-weight: 600;
+#contact-buttons div .fa {
   font-size: 2.75rem;
+  font-weight: 600;
+  padding-right: 1rem;
 }
 
-footer{
-  width: 100vw;
-  height: 10rem;
-  border-top: .4rem solid #BE3143;
-  background-color: #303841; 
-  font-size: 1.5rem;
-  color: #F0F0F0;
+footer {
+  background-color: #303841;
+  border-top: 0.4rem solid #be3143;
   box-sizing: border-box;
-  text-align: center;
+  color: #f0f0f0;
+  font-size: 1.5rem;
+  height: 10rem;
   padding: 3.5rem 0;
+  text-align: center;
+  width: 100vw;
 }
 
-@media screen and (max-width: 910px){
-  #navbar{
+@media screen and (max-width: 910px) {
+  #navbar {
     font-size: 2rem;
   }
 
-  #project h2{
+  #project h2 {
     font-size: 4rem;
   }
 
-  #projects hr{
+  #projects hr {
+    height: 0.18rem;
     width: 62.5rem;
-    height: .18rem;
   }
 
-  #contact-buttons{
-    font-size: 2rem; 
+  #contact-buttons {
+    font-size: 2rem;
   }
 
-  #contact-buttons div .fa{
+  #contact-buttons div .fa {
     font-size: 2.25rem;
   }
 }
 
-@media screen and (max-width: 700px){
-  #projects h2{
+@media screen and (max-width: 700px) {
+  #projects h2 {
     font-size: 3.75rem;
   }
 
-  #projects hr{
+  #projects hr {
     width: 90vw;
   }
 }
 
-@media screen and (max-width: 440px){
-  #navbar{
+@media screen and (max-width: 440px) {
+  #navbar {
     font-size: 1.5rem;
   }
-  #welceome-section h1{
+  #welceome-section h1 {
     font-size: 5rem;
   }
-  #welcome-section p{
+  #welcome-section p {
     font-size: 2rem;
   }
-  .project-tile{
+  .project-tile {
     width: 95vw;
   }
-  #content h2{
+  #content h2 {
     font-size: 4.5rem;
   }
-  #content p{
+  #content p {
     font-size: 1.5rem;
   }
-  #contact-buttons{
+  #contact-buttons {
     flex-flow: column;
   }
 }
 
-@media screen and (max-width: 320px){
-  #navbar{
+@media screen and (max-width: 320px) {
+  #navbar {
     font-size: 1.3rem;
   }
-  li{
+  li {
     padding: 0 1rem;
   }
 }
